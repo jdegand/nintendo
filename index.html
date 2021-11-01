@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Nintendo</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="mobile-nav">
+            <div class="logo-div"><span>Nintendo</span></div>
+            <div class="bars-container">
+                <div><span><i class="fas fa-user"></i></span> Log in</div>
+                <div><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+        <div class="mobile-hamburger-panel">
+            <div><span><i class="fas fa-search"></i></span> Search</div>
+            <div><span><i class="fas fa-gamepad"></i></span><span> Games</span><span class="margin-left"><i class="fas fa-chevron-down mobile-panel-games-arrow"></i></span></div>
+            <div id="gamesArrowContent">
+                <div class="games-column">
+                    <div><i class="fas fa-gamepad"></i></div>
+                    <div>Shop game</div>
+                </div>
+                <div class="games-column">
+                    <div><i class="fas fa-tag"></i></div>
+                    <div>Sales and deals</div>
+                </div>
+                <div class="games-column">
+                    <div><i class="fas fa-calendar-alt"></i></div>
+                    <div>Coming Soon</div>
+                </div>
+                <div class="games-column">
+                    <div><i class="fas fa-globe"></i></div>
+                    <div>Online Service</div>
+                </div>
+                <div class="games-column">
+                    <div><i class="fas fa-mobile-alt"></i></div>
+                    <div>Mobile</div>
+                </div>
+            </div>
+            <div><span><i class="fas fa-box"></i></span><span> Hardware</span><span class="margin-left-2"><i class="fas fa-chevron-down mobile-panel-hardware-arrow"></i></span></div>
+            <div id="hardwareArrowContent">
+                <div class="hardware-column hardware-span-2">
+                    <div><i class="fas fa-gamepad"></i></div>
+                    <div>Nintendo Switch Lineup</div>
+                </div>
+                <div class="hardware-column">
+                    <div><i class="fas fa-gamepad"></i></div>
+                    <div>Accessories</div>
+                </div>
+                <div class="hardware-column">
+                    <div><i class="fas fa-male"></i></div>
+                    <div>Amiibo</div>
+                </div>
+            </div>
+            <div><span><i class="far fa-clone"></i></span> News & Events</div>
+            <div><span><i class="fas fa-star"></i></span> Play Nintendo</div>
+            <div><span><i class="fas fa-snowflake"></i></span> Holiday Gift Guide</div>
+            <div>---------------------------------------------</div>
+            <div><span><i class="fas fa-heart"></i></span> Wish List</div>
+            <div><span><i class="far fa-comment-alt"></i></span> Support</div>
+            <div>Change Region <span><i class="fas fa-flag-usa"></i></span></div>
+        </div>
+        <nav class="desktop-nav">
+            <div class="desktop-nav-left">
+                <div class="logo-div"><span>Nintendo</span></div>
+                <div>
+                   <button class="desktop-nav-button">
+                       <span><i class="fas fa-search"></i></span>
+                        <span> Search games, systems, support etc</span>
+                   </button>
+                </div>
+            </div>
+            <div class="desktop-nav-right">
+                <div>
+                    <span><i class="far fa-comment-alt"></i></span>
+                    <span> Support</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-heart"></i></span>
+                    <span> Wish List</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-user"></i></span>
+                    <span> Log in / Sign up</span>
+                </div>
+            </div>
+        </nav>
+        <nav class="secondary-nav">
+            <div class="secondary-nav-div">
+                <span><i class="fas fa-gamepad"></i></span>
+                <span> Games </span>
+                <span><i class="secondary-arrow fas fa-chevron-down"></i></span>
+                <div class="dropdown-content" id="gamesDropdown">
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-gamepad"></i></div>
+                        <div>Shop game</div>
+                    </div>
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-tag"></i></div>
+                        <div>Sales and deals</div>
+                    </div>
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-calendar-alt"></i></div>
+                        <div>Coming Soon</div>
+                    </div>
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-globe"></i></div>
+                        <div>Online Service</div>
+                    </div>
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-mobile-alt"></i></div>
+                        <div>Mobile</div>
+                    </div>
+                    <div id="gamesClose"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="secondary-nav-div">
+                <span><i class="fas fa-power-off"></i></span>
+                <span> Hardware </span>
+                <span><i class="secondary-arrow fas fa-chevron-down"></i></span>
+                <div class="dropdown-content" id="hardwareDropdown">
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-gamepad"></i></div>
+                        <div class="center">Nintendo Switch Lineup</div>
+                    </div>
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-gamepad"></i></div>
+                        <div>Accessories</div>
+                    </div>
+                    <div class="dropdown-column">
+                        <div><i class="fas fa-male"></i></div>
+                        <div>Amiibo</div>
+                    </div>
+                    <div id="hardwareClose"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="secondary-nav-div">
+                <span><i class="far fa-clone"></i></span>
+                <span> News & Events </span>
+            </div>
+            <div>
+                <span><i class="fas fa-star"></i></span>
+                <span> Play Nintendo </span>
+            </div>
+            <div>
+                <span><i class="fas fa-snowflake"></i></span>
+                <span> Holiday Gift Guide </span>
+            </div>
+        </nav>
+        <div class="search-panel">
+            <div class="search-panel-top-flex">
+                <div class="desktop-nav-left">
+                    <div class="logo-div"><span>Nintendo</span></div>
+                    <div>
+                       <button class="desktop-nav-button">
+                           <span><i class="fas fa-search"></i></span>
+                            <span id="desktop-nav-span"> Search games, systems, support etc</span>
+                       </button>
+                    </div>
+                    <div id="times"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="search-panel-bottom-flex">
+                <div class="suggestions-div">
+                    <h3>Suggestions</h3>
+                    <ul class="suggestions-ul">
+                        <li>Nintendo Switch</li>
+                        <li>Nintendo Switch Games</li>
+                        <li>Nintendo Switch Online</li>
+                        <li>Nintendo News</li>
+                        <li>Ring Fit Adventure</li>
+                        <li>Mario Games</li>
+                        <li>Zelda Games</li>
+                        <li>Pokemon Games</li>
+                    </ul>
+                </div>
+                <div class="next-game-div">
+                    <h3>Find your next game</h3>
+                    <div class="search-panel-grid">
+                        <div class="search-panel-card">
+                            Games on Sale
+                        </div>
+                        <div class="search-panel-card">
+                            New Games
+                        </div>
+                        <div class="search-panel-card">
+                            Nintendo Switch Games
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="first-section">
+            <div>
+                <picture>
+                    <source media="(min-width:1000px)" srcset="images/hero.avif">
+                    <source media="(min-width:999px)" srcset="images/hero-mobile.avif">
+                    <img class="top-hero-mobile" src="images/hero-mobile.avif" alt="">
+                  </picture>
+            </div>
+            <div class="first-section-grid">
+                <div class="title-info">
+                    <div class="platform">Nintendo Switch</div>
+                    <h1>Stardew Valley</h1>
+                    <div>Available Now</div>
+                    <div>$14.99</div>
+                </div>
+                <div class="buy-container">
+                    <button class="digital-button">Buy Digital <span><i class="digital-right fas fa-chevron-right"></i></span></button>
+                    <div class="eligible-div">
+                        <div>Eligible for up to 75 points</div>
+                        <div class="red eligible-heart-div">
+                            <span><!--<i class="far fa-heart"></i>-->
+                                <svg class="heart-spark" viewBox="0 0 54 54" fill="currentColor" stroke="currentColor" role="presentation">
+                                    <g class="hearts">
+                                      <path class="heart heart-outline" d="M27,38.9c-0.4,0-0.6-0.1-0.8-0.4L16.7,29c-1.8-1.8-2.7-3.8-2.7-6c0-4.4,3.5-8,7.9-8c1.9,0,3.7,0.8,5.1,2.3c1.4-1.4,3.2-2.3,5.1-2.3c4.4,0,7.9,3.6,7.9,8c0,2.6-1.5,4.6-2.7,6.1l-9.5,9.4C27.6,38.8,27.2,38.9,27,38.9z M21.9,17.5c-3.1,0-5.6,2.5-5.6,5.6c0,1.9,1.1,3.3,2,4.3l8.6,8.7l8.5-8.6c1.4-1.5,2.1-3,2.1-4.4c0-3.1-2.5-5.6-5.6-5.6c-1.5,0-3,1-4.1,2.5c-0.5,0.6-1.4,0.6-1.9,0C24.9,18.4,23.5,17.5,21.9,17.5z"></path>
+                                      <path class="heart heart-filled" d="M32.1,15.1c-1.9,0-3.7,0.8-5.1,2.3c-1.4-1.4-3.2-2.3-5.1-2.3c-4.4,0-7.9,3.6-7.9,8c0,2.1,0.9,4.2,2.7,6l9.5,9.5c0.2,0.2,0.5,0.4,0.8,0.4c0.2,0,0.6-0.1,0.8-0.4l9.5-9.4c1.2-1.4,2.7-3.5,2.7-6.1C40,18.7,36.5,15.1,32.1,15.1z"></path>
+                                    </g>
+                                    <g class="sparks">
+                                      <path class="spark a" d="M 27 8 L 27 0" stroke-width="2"></path>
+                                      <path class="spark" d="M 27 46 L 27 54" stroke-width="2"></path>
+                                      <path class="spark" transform="matrix(0.7071 0.7071 -0.7071 0.7071 19.9584 -28.1838)" d="M 44 14 L 44 6" stroke-width="2"></path>
+                                      <path class="spark" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 24.1421 10)" d="M 10 6 L 10 14" stroke-width="2"></path>
+                                      <path class="spark" transform="matrix(4.547455e-11 1 -1 4.547455e-11 77 -23)" d="M 50 31 L 50 23" stroke-width="2"></path>
+                                      <path class="spark" transform="matrix(-9.049490e-11 1 -1 -9.049490e-11 31 23)" d="M 4 23 L 4 31" stroke-width="2"></path>
+                                      <path class="spark" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 106.2254 44)" d="M 44 48 L 44 40" stroke-width="2"></path>
+                                      <path class="spark" transform="matrix(0.7071 0.7071 -0.7071 0.7071 34.0416 5.8162)" d="M 10 40 L 10 48" stroke-width="2"></path>
+                                    </g>
+                                </svg>                 
+                            </span>
+                             Add to Wish List
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="lightbox">
+            <div class="row">
+                <div class="lightbox-image-div span-2">
+                  <img src="images/screenshot01-mobile.avif" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="lightbox-image-div">
+                  <img src="images/screenshot02-mobile.avif" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="lightbox-image-div">
+                  <img src="images/screenshot03-mobile.avif" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="lightbox-image-div">
+                  <img src="images/screenshot04-mobile.avif" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="lightbox-image-div">
+                    <img src="images/screenshot05-mobile.jpeg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                  </div>
+              </div>
+              
+              <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+              
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="images/screenshot01-mobile.avif" style="width:100%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="images/screenshot02-mobile.avif" style="width:100%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="images/screenshot03-mobile.avif" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="images/screenshot04-mobile.avif" style="width:100%">
+                  </div>
+
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="images/screenshot05-mobile.jpeg" style="width:100%">
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                          
+                </div>
+              </div>
+        </div>
+        <section class="description-section">
+            <h1>You're moving to the valley...</h1>
+            <p>You’ve inherited your grandfather’s old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won’t be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town’s most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!</p>
+            <p>Now with Multiplayer! Invite 1-3 players to join you in the valley! Players can work together to build a thriving farm, share resources, and build relationships with townspeople or each other. As more hands are better than one, players have the option to scale profit margin on produce sold for a more challenging experience.</p>
+            <button class="explore-button">Explore this game's official site <span><i class="explore-right fas fa-chevron-right"></i></span></button>
+        </section>
+        <div class="dl-wrapper">
+            <dl class="details-dl">
+                <div class="dl-flex gray release-date">
+                    <dt><span><i class="fas fa-calendar-alt"></i></span> Release Date:</dt>
+                    <dd>October 05, 2017</dd>
+                </div>
+                <div class="dl-flex players">
+                    <dt><span><i class="fas fa-user-friends"></i></span> Players:</dt>
+                    <dd>up to 4 players</dd>
+                </div>
+                <div class="dl-flex gray genre">
+                    <dt><span><i class="fas fa-gamepad"></i></span> Genre:</dt>
+                    <dd>Indie, Simulation, Role-Playing</dd>
+                </div>
+                <div class="dl-flex publisher">
+                    <dt><span><i class="fas fa-building"></i></span> Publisher:</dt>
+                    <dd>ConcernedApe</dd>
+                </div>
+                <div class="dl-flex gray developer">
+                    <dt><span><i class="fas fa-cog"></i></span> Developer:</dt>
+                    <dd>ConcernedApe</dd>
+                </div>
+                <div class="dl-flex game-file-size">
+                    <dt><span><i class="fas fa-database"></i></span> Game File Size:</dt>
+                    <dd>1.5 GB</dd>
+                </div>
+                <div class="dl-grid gray supported-languages">
+                    <dt><span><i class="fas fa-globe"></i></span> Supported Languages:</dt>
+                    <dd>Japanese, French, German, Italian, Spanish, Korean, Portuguese, Russian, Chinese, English</dd>
+                </div>
+            </dl>
+            <dl class="play-esrb-dl">
+                <div class="play-modes-dl">
+                    <dt>Play Modes:</dt>
+                    <dd>
+                        <div class="play-mode-flex">
+                            <div><img class="play-mode-svg" src="images/tv-mobile.svg" alt=""></div>
+                            <div><img class="play-mode-svg" src="images/tabletop-mobile.svg" alt=""></div>
+                            <div><img class="play-mode-svg" src="images/handheld-mobile.svg" alt=""></div>
+                        </div>
+                        <div class="play-mode-flex">
+                            <div>TV Mode</div>
+                            <div>Tabletop Mode</div>
+                            <div>Handheld Mode</div>
+                        </div>
+                        <p class="compatibility">Software compatibility and play experience may differ on Nintendo Switch Lite. Additional accessories may be required (sold separately). See support for details.</p>
+                    </dd>
+                </div>
+                <div class="esrb-div">
+                    <dt>ESRB Rating:</dt>
+                    <dd>Simulated Gambling, Use of Alcohol, Fantasy Violence, Use of Tobacco, Mild Blood, Mild Language</dd>
+                    <p class="users-interact">Users Interact</p>
+                </div>
+            </dl>
+            <div class="online-div">
+                <div class="online-div-flex">
+                    <div><img class="online-img" src="images/logo-nso.svg" alt=""></div>
+                    <div class="online-div-padding">Play online, access classic Super NES™ games, and more with a Nintendo Switch Online membership.</div>
+                    <div class="online-div-padding">Learn more <span><i class="fas fa-chevron-right"></i></span></div>
+                </div>
+                <div class="online-buttons-grid">
+                    <div class="online-div-padding">This game supports:</div>
+                    <button class="online-button">Online Play</button>
+                    <button class="online-button">Save Cloud Data</button>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>Nintendo Switch Online membership (sold separately) and Nintendo Account required for online play. Not available in all countries. Internet access required for online features. Terms apply. nintendo.com/switch-online</p>
+                <p>Stardew Valley © ConcernedApe LLC 2016-2020. All rights reserved.</p>
+            </div>
+        </div>
+        <section class="viewed-section">
+            <h1>Your recently viewed items</h1>
+            <div class="viewed-section-grid">
+                <div>
+                    <div><img src="images/hero-mobile.avif"></div>
+                    <div>10/05/17</div>
+                    <div>Stardew Valley</div>
+                    <div>$14.99</div>
+                    <div class="platform-2">Nintendo Switch</div><span class="viewed-heart"><i class="far fa-heart"></i></span>
+                </div>
+                <div class="mobile-none">
+                    <div><img src="images/super-nintendo-mobile.avif"></div>
+                    <div>09/05/19</div>
+                    <div>Super Nintendo Online</div>
+                    <div>$0.00</div>
+                    <div class="platform-2">Nintendo Switch</div><span class="viewed-heart-2"><i class="far fa-heart"></i></span>
+                </div>
+                <div class="mobile-none">
+                    <div><img src="images/hero-mobile.avif"></div>
+                    <div>10/05/17</div>
+                    <div>Stardew Valley</div>
+                    <div>$14.99</div>
+                    <div class="platform-2">Nintendo Switch</div><span class="viewed-heart-3"><i class="far fa-heart"></i></span>
+                </div>
+            </div>
+        </section>
+        <div class="faq">
+            <ul class="faq-ul">
+                <li>
+                    <div class="faq-title">
+                        <div>Games</div>
+                        <div><i class="fas fa-chevron-down faq-down"></i></div>
+                    </div>
+                    <ul class="closed">
+                        <li>Coming Soon</li>
+                        <li>Nintendo Switch</li>
+                        <li>Wii U</li>
+                        <li>Nintendo 3DS</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="faq-title">
+                        <div>Explore More</div>
+                        <div><i class="fas fa-chevron-down faq-down"></i></div>
+                    </div>
+                    <ul class="closed">
+                        <li>Game Guide</li>
+                        <li>All Mario Games</li>
+                        <li>Games for Any Age</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="faq-title">
+                        <div>Support</div>
+                        <div><i class="fas fa-chevron-down faq-down"></i></div>
+                    </div>
+                    <ul class="closed">
+                        <li>Warranty</li>
+                        <li>Nintendo Switch Support</li>
+                        <li>Wii U Support</li>
+                        <li>Repair Help</li>
+                        <li>Nintendo Product Recycling</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="faq-title">
+                        <div>Where To Buy</div>
+                        <div><i class="fas fa-chevron-down faq-down"></i></div>
+                    </div>
+                    <ul class="closed">
+                        <li>Game Store</li>
+                        <li>List of Online Retailers</li>
+                        <li>Nintendo NY</li>
+                        <li>Nintendo Store</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="faq-title">
+                        <div>Health & Safety/Privacy</div>
+                        <div><i class="fas fa-chevron-down faq-down"></i></div>
+                    </div>
+                    <ul class="closed">
+                        <li>Health & Safety Precautions Manual</li>
+                        <li>Cookies and Interest-Based ads</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="faq-title">
+                        <div>Change Region</div>
+                        <div><i class="fas fa-flag-usa"></i></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="contact-text-section">
+            <div class="contact-us-div">
+                <div>Contact Us</div>
+                <div>Website Feedback</div>
+            </div>
+            <div class="icons-row">
+                <div class="icon-div facebook"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="icon-div instagram"><i class="fab fa-instagram fa-2x"></i></div>
+                <div class="icon-div twitter"><i class="fab fa-twitter fa-2x"></i></div>
+                <div class="icon-div youtube"><i class="fab fa-youtube fa-2x"></i></div>
+            </div>
+            <div class="esrb-square"></div>
+            <div class="contact-text-div">
+                <p>© 2021 Nintendo. Games are property of their respective owners.</p>
+                <p>Nintendo of America Inc. | Headquarters are in Redmond, Washington, USA | Support</p>
+            </div>
+        </div>
+        <div class="fixed-footer">
+            <div class="fixed-footer-grid">
+                <div>
+                    <div><i class="fas fa-calendar-alt"></i></div>
+                    <div class="column">
+                        <div>New</div>
+                        <div>Releases</div> 
+                    </div>
+                </div>
+                <div>
+                    <div><i class="fas fa-chart-line"></i></div>
+                    <div class="column">
+                        <div>Best</div> 
+                        <div>Sellers</div>
+                    </div>
+                </div>
+                <div>
+                    <div><i class="footer-search fas fa-search fa-2x"></i></div>
+                </div>
+                <div>
+                    <div><i class="fas fa-tag"></i></div>
+                    <div>Deals</div>
+                </div>
+                <div>
+                    <i class="far fa-heart"></i>
+                    <div>Wish List</div>
+                </div>
+            </div>   
+        </div>
+    </footer>
+</body>
+</html>
+
+    <!--
+    <svg class="heart-spark" viewBox="0 0 54 54" fill="currentColor" stroke="currentColor" role="presentation">
+        <g class="hearts">
+          <path class="heart heart-outline" d="M27,38.9c-0.4,0-0.6-0.1-0.8-0.4L16.7,29c-1.8-1.8-2.7-3.8-2.7-6c0-4.4,3.5-8,7.9-8c1.9,0,3.7,0.8,5.1,2.3c1.4-1.4,3.2-2.3,5.1-2.3c4.4,0,7.9,3.6,7.9,8c0,2.6-1.5,4.6-2.7,6.1l-9.5,9.4C27.6,38.8,27.2,38.9,27,38.9z M21.9,17.5c-3.1,0-5.6,2.5-5.6,5.6c0,1.9,1.1,3.3,2,4.3l8.6,8.7l8.5-8.6c1.4-1.5,2.1-3,2.1-4.4c0-3.1-2.5-5.6-5.6-5.6c-1.5,0-3,1-4.1,2.5c-0.5,0.6-1.4,0.6-1.9,0C24.9,18.4,23.5,17.5,21.9,17.5z"></path>
+          <path class="heart heart-filled" d="M32.1,15.1c-1.9,0-3.7,0.8-5.1,2.3c-1.4-1.4-3.2-2.3-5.1-2.3c-4.4,0-7.9,3.6-7.9,8c0,2.1,0.9,4.2,2.7,6l9.5,9.5c0.2,0.2,0.5,0.4,0.8,0.4c0.2,0,0.6-0.1,0.8-0.4l9.5-9.4c1.2-1.4,2.7-3.5,2.7-6.1C40,18.7,36.5,15.1,32.1,15.1z"></path>
+        </g>
+        <g class="sparks">
+          <path class="spark a" d="M 27 8 L 27 0" stroke-width="2"></path>
+          <path class="spark" d="M 27 46 L 27 54" stroke-width="2"></path>
+          <path class="spark" transform="matrix(0.7071 0.7071 -0.7071 0.7071 19.9584 -28.1838)" d="M 44 14 L 44 6" stroke-width="2"></path>
+          <path class="spark" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 24.1421 10)" d="M 10 6 L 10 14" stroke-width="2"></path>
+          <path class="spark" transform="matrix(4.547455e-11 1 -1 4.547455e-11 77 -23)" d="M 50 31 L 50 23" stroke-width="2"></path>
+          <path class="spark" transform="matrix(-9.049490e-11 1 -1 -9.049490e-11 31 23)" d="M 4 23 L 4 31" stroke-width="2"></path>
+          <path class="spark" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 106.2254 44)" d="M 44 48 L 44 40" stroke-width="2"></path>
+          <path class="spark" transform="matrix(0.7071 0.7071 -0.7071 0.7071 34.0416 5.8162)" d="M 10 40 L 10 48" stroke-width="2"></path>
+        </g>
+    </svg>
+    -->
